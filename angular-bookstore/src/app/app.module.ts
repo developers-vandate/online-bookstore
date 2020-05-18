@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BookListComponent } from './components/book-list/book-list.component';
+import { BookCategoryComponent } from './components/book-category/book-category.component';
 import { BookService } from './services/book.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     BookListComponent,
+    BookCategoryComponent,
     PageNotFoundComponent
   ],
   imports: [
