@@ -10,6 +10,7 @@ import { BookService } from './services/book.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SearchComponent } from './components/search/search.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 const routes: Routes = [
   { path: 'books', component: BookListComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
     BookCategoryComponent,
     PageNotFoundComponent,
     SearchComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,

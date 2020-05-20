@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookListComponent implements OnInit {
   books: Book[];
+  pageOfItems: Array<Book>;
+  pageSize: number = 6;
   currentCategoryId: number;
   searchMode: boolean;
 
@@ -49,6 +51,16 @@ export class BookListComponent implements OnInit {
     this._bookService.searchBooks(keyword).subscribe(
       data => this.books = data
     )
+  }
+
+  pageClick(pageOfItems: Array<Book>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
+  }
+
+  updatePageSize(pageSize: number) {
+    this.pageSize = pageSize;
+    this.listBook();
   }
 
 }
